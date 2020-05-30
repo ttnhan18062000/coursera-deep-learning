@@ -4,7 +4,7 @@
 
     - [ ] A neuron computes an activation function followed by a linear function (z = Wx + b)
 
-    - [x] A neuron computes a linear function (z = Wx + b) followed by an activation function
+    - [ ] A neuron computes a linear function (z = Wx + b) followed by an activation function
 
     - [ ] A neuron computes a function g that scales the input x linearly (Wx + b)
 
@@ -14,13 +14,10 @@
     
 2. Which of these is the "Logistic Loss"?
 
-    - Check [here](https://en.wikipedia.org/wiki/Cross_entropy#Cross-entropy_error_function_and_logistic_regression).
-    
-    Note: this is the logistic loss you've seen in lecture!
+
     
 3. Suppose img is a (32,32,3) array, representing a 32x32 image with 3 color channels red, green and blue. How do you reshape this into a column vector?
 
-    - `x = img.reshape((32 * 32 * 3, 1))`
     
 4. Consider the two following random arrays "a" and "b":
 
@@ -32,7 +29,6 @@
     
     What will be the shape of "c"?
     
-    b (column vector) is copied 3 times so that it can be summed to each column of a. Therefore, `c.shape = (2, 3)`.
     
     
 5. Consider the two following random arrays "a" and "b":
@@ -44,8 +40,7 @@
     ```
     
     What will be the shape of "c"?
-    
-     "*" operator indicates element-wise multiplication. Element-wise multiplication requires same dimension between two matrices. It's going to be an error.
+
 
 6. Suppose you have n_x input features per example. Recall that X=[x^(1), x^(2)...x^(m)]. What is the dimension of X?
 
@@ -64,7 +59,6 @@
     
     What is the shape of c?
     
-    `c.shape = (12288, 45)`, this is a simple matrix multiplication example.
     
 8. Consider the following code snippet:
 
@@ -77,9 +71,7 @@
     ```
     
     How do you vectorize this?
-
-    `c = a + b.T`
-
+    
 9. Consider the following code:
 
     ```
@@ -89,9 +81,7 @@
     ```
     
     What will be c?
-    
-    This will invoke broadcasting, so b is copied three times to become (3,3), and ∗ is an element-wise product so `c.shape = (3, 3)`.
-    
+
 10. Consider the following computation graph.
 
     ```
@@ -100,5 +90,3 @@
       = a * (b + c) - (b + c)
       = (a - 1) * (b + c)
     ```
-      
-    Answer: `(a - 1) * (b + c)`
